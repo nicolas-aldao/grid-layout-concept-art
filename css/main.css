@@ -1,0 +1,222 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.flex-container {
+    display: flex;
+    min-width: 100%;
+    height: 100vh;
+    background: #766161;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: grid;
+    grid-template: repeat(10, 1fr) / repeat(10, 1fr);
+    background-image: linear-gradient(to right, #7c7575, #9a9292, #b9b0b0, #dad0d0, #fbf0f0);
+    grid-template-areas: ". . . . . . . . . ."
+  					    ". . . . . . item-4 . . ."
+                        ". . . . . item-3 item-4 . . ."
+                        ". . . . item-2 item-3 item-4 . . ."
+                        ". . . item-1 item-2 item-3 qlen qlen qpauqlen ."
+                        ". . . item-1 item-2 qring qring qring . ."
+                        ". . . item-1 qpau qpau qpau . . ."
+                        ". . . qgeor qgeor qgeor . . . ."
+                        ". . . . . . . . . ."
+                        ". . . . . . . . . .";
+    max-height: 590px;
+    max-width: 1200px;
+}
+
+.rectangle {
+    background: #87A7B3;
+    grid-row: 3 / 8;
+    grid-column: 1 / 3;
+    /* opacity: 0.5; */
+}
+
+.text {
+    border: dotted 1rem #E1F1DD;
+    background: #766161;
+    font-size: 1.6rem;
+    margin: 3rem;
+    padding: 3rem;
+    grid-row: 4 / 10;
+    grid-column: 1 / 4;
+    height: fit-content;
+}
+
+.newspaper {
+    background-image: url("../images/newspaper.jpg");
+    background-position: center;
+    margin: 2rem;
+    grid-row: 9 / 11;
+    grid-column: 3 / 6;
+}
+
+.circle {
+    background: #87A7B3;
+    border-end-start-radius: 100%;
+    grid-row: 1 / 3;
+    grid-column: 10 / 11;
+}
+
+.circle2 {
+    background: #87A7B3;
+    border-radius: 50%;
+    margin-inline-end: 2rem;
+    margin-inline-start: 2rem;
+    grid-row: 8 / 12;
+    grid-column: 7 / 9;
+}
+
+.quote {
+    font-size: 1.6rem;
+}
+
+
+img {
+    height: 160px;
+    max-height: 100%;
+    width: 90px;
+    margin: auto;
+}
+
+.item {
+    height: 170px;
+    width: 100px;
+    display: flex;
+    background-color: #E1F1DD;
+    border-radius: 4rem;
+    opacity: 0.7;
+}
+
+.item-1 {
+    grid-area: item-1;
+}
+
+.qgeor {
+    grid-area: qgeor;
+}
+
+.item-2 {
+    grid-area: item-2;
+}
+
+.qpau {
+    grid-area: qpau;
+}
+
+.item-3 {
+    grid-area: item-3;
+} 
+
+.qring {
+    grid-area: qring;
+}
+
+.item-4 {
+    grid-area: item-4;
+}
+
+.qlen {
+    grid-area: qlen;
+}
+
+
+.title {
+    font-size: 3.6rem;
+    transform: rotate(180deg);
+    writing-mode:vertical-lr;
+    grid-row: 6 / 9;
+    grid-column: 9 / 10;
+}
+
+
+@media (max-width: 1132px) {
+    .text {
+        width: 25rem;
+        margin-inline-end: 1rem;
+    } 
+}
+
+@media (max-width: 968px) {
+    .container {
+        grid-template: repeat(11, minmax(70px, 1fr)) / repeat(9, minmax(100px, 1fr));
+        grid-template-areas: ". . . . . . . . . "
+                              ". . . . . . item-4 . . "
+                            ". . . . . item-3 item-4 . . "
+                            ". . . . item-2 item-3 item-4 . . "
+                            ". . . item-1 item-2 item-3 qlen qlen qpauqlen "
+                            ". . . item-1 item-2 qring qring qring . "
+                            ". . . item-1 qpau qpau qpau qpau . "
+                            ". . . qgeor qgeor qgeor . . . "
+                            ". . . . . . . . . "
+                            ". . . . . . . . . "
+                            ". . . . . . . . . "
+                            ". . . . . . . . . "
+                            ". . . . . . . . . "
+                            ". . . . . . . . . "
+                            ". . . . . . . . . ";
+        max-height: 800px;
+    }
+
+    .qgeor {
+        margin-block-start: -2.7rem;
+    }
+    
+    .item-2 {
+        grid-area: item-2;
+    }
+    
+    .qpau {
+        margin-block-start: -2.7rem;
+    }
+    
+    .item-3 {
+        grid-area: item-3;
+    } 
+    
+    .qring {
+        margin-block-start: -2.7rem;
+    }
+    
+    .item-4 {
+        grid-area: item-4;
+    }
+    
+    .qlen {
+        margin-block-start: -2.7rem;
+    }
+
+    .newspaper {
+        margin: 0;
+        grid-row: 10 / 12;
+        grid-column: 3 / 6;
+    }
+
+    .title {
+        grid-row: 7 / 10;
+        grid-column: 8 / 9;
+    }
+
+    .circle {
+        grid-row: 1 / 3;
+        grid-column: 8 / 10;
+    }
+    
+
+    .circle2 {
+        grid-row: 9 / 11;
+        grid-column: 6 / 8;
+    }
+}
+
