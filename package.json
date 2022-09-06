@@ -1,0 +1,24 @@
+{
+  "name": "grid-layout-concept-art-master",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicolas-aldao/grid-layout-concept-art.git"
+  },
+  "author": "Nicolás Aldao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicolas-aldao/grid-layout-concept-art/issues"
+  },
+  "homepage": "https://github.com/nicolas-aldao/grid-layout-concept-art",
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  }
+}
